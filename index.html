@@ -1,810 +1,627 @@
 <!DOCTYPE html>
 <html lang="hi" class="scroll-smooth">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
-  <title>लाडी सत्योति ट्रस्ट | वंशावली कौम पूरीयां (Puri Heritage)</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>लाडी सत्योति ट्रस्ट - बटाला | Ladi Satyoti Trust</title>
 
-  <!-- Tailwind CSS -->
-  <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- Google Fonts: Devanagari Heritage Typography -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@300;400;500;600;700;800&family=Rozha+One&family=Tiro+Devanagari+Hindi:ital@0;1&display=swap" rel="stylesheet">
+    <!-- Google Fonts for Regal Hindi & English Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Inter:wght@300;400;500;600;700&family=Rozha+One&family=Tiro+Devanagari+Hindi:ital@0;1&display=swap" rel="stylesheet">
 
-  <!-- Tailwind Custom Colors and Extensions Configuration -->
-  <script>
-    tailwind.config = {
-      darkMode: 'class',
-      theme: {
-        extend: {
-          colors: {
-            maroon: {
-              950: '#260107',
-              900: '#3B020B',
-              800: '#520713',
-              700: '#6E0E1E',
-              600: '#8C182A',
-            },
-            gold: {
-              100: '#FFF8E1',
-              200: '#FFECB3',
-              300: '#FFE082',
-              400: '#FFD54F',
-              500: '#FFCA28',
-              600: '#D4AF37',
-              700: '#B38F24',
-              800: '#8A6D15',
-            },
-            saffron: {
-              500: '#FF6D00',
-              600: '#E65100',
-              700: '#BF360C',
-            },
-            ivory: {
-              50: '#FFFEFA',
-              100: '#FAF6EE',
-              200: '#F3EAD8',
-              300: '#E9D9BF',
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        imperial: '#3B020B',
+                        maroonDark: '#280107',
+                        gold: '#D4AF37',
+                        goldLight: '#F3E5AB',
+                        goldDark: '#996515',
+                        saffron: '#FF9933',
+                        saffronDark: '#D84315',
+                        cream: '#FAF7F2',
+                        creamCard: '#FFFDF9',
+                        charcoal: '#1A1A1A'
+                    },
+                    fontFamily: {
+                        hindiTitle: ['"Rozha One"', 'serif'],
+                        hindiBody: ['"Tiro Devanagari Hindi"', 'serif'],
+                        englishTitle: ['"Cinzel"', 'serif'],
+                        sans: ['"Inter"', 'sans-serif']
+                    },
+                    boxShadow: {
+                        'gold-glow': '0 0 25px rgba(212, 175, 55, 0.4)',
+                        'gold-deep': '0 10px 30px rgba(0, 0, 0, 0.6), 0 0 15px rgba(212, 175, 55, 0.3)',
+                        'card-soft': '0 4px 20px -2px rgba(59, 2, 11, 0.08)'
+                    }
+                }
             }
-          },
-          fontFamily: {
-            heading: ['"Rozha One"', 'serif'],
-            body: ['"Mukta"', 'sans-serif'],
-            devanagari: ['"Tiro Devanagari Hindi"', 'serif']
-          },
-          animation: {
-            'aura-pulse': 'auraPulse 4s ease-in-out infinite alternate',
-            'flame-glow': 'flameGlow 2.5s ease-in-out infinite alternate',
-            'shimmer': 'shimmer 3s linear infinite',
-            'float': 'float 6s ease-in-out infinite',
-          },
-          keyframes: {
-            auraPulse: {
-              '0%': { transform: 'scale(0.98)', opacity: '0.45', filter: 'blur(20px)' },
-              '100%': { transform: 'scale(1.08)', opacity: '0.85', filter: 'blur(35px)' },
-            },
-            flameGlow: {
-              '0%': { boxShadow: '0 0 25px rgba(230, 81, 0, 0.4), 0 0 50px rgba(212, 175, 55, 0.3)' },
-              '100%': { boxShadow: '0 0 45px rgba(255, 109, 0, 0.7), 0 0 80px rgba(212, 175, 55, 0.6)' },
-            },
-            shimmer: {
-              '0%': { backgroundPosition: '-200% 0' },
-              '100%': { backgroundPosition: '200% 0' }
-            },
-            float: {
-              '0%, 100%': { transform: 'translateY(0px)' },
-              '50%': { transform: 'translateY(-6px)' }
-            }
-          }
         }
-      }
-    }
-  </script>
+    </script>
 
-  <style>
-    /* Custom Scrollbar */
-    ::-webkit-scrollbar {
-      width: 10px;
-    }
-    ::-webkit-scrollbar-track {
-      background: #3B020B;
-    }
-    ::-webkit-scrollbar-thumb {
-      background: linear-gradient(180deg, #D4AF37, #8A6D15);
-      border-radius: 5px;
-    }
+    <style>
+        :root {
+            --base-font-size: 16px;
+        }
 
-    /* Ambient background gradient pattern */
-    body {
-      background-color: #FAF6EE;
-      background-image: 
-        radial-gradient(circle at 50% 0%, rgba(212, 175, 55, 0.12) 0%, transparent 60%),
-        radial-gradient(circle at 0% 100%, rgba(59, 2, 11, 0.05) 0%, transparent 50%),
-        radial-gradient(circle at 100% 100%, rgba(230, 81, 0, 0.05) 0%, transparent 50%);
-      background-attachment: fixed;
-    }
+        html {
+            font-size: var(--base-font-size);
+            background-color: #FAF7F2;
+        }
 
-    /* Gold shimmer title */
-    .gold-gradient-text {
-      background: linear-gradient(135deg, #FFE082 0%, #D4AF37 40%, #FFF8E1 60%, #B38F24 100%);
-      background-size: 200% auto;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      animation: shimmer 6s linear infinite;
-    }
+        /* Ornate Gold Border & Leaf Styling */
+        .gold-border-gradient {
+            border-image: linear-gradient(to bottom right, #D4AF37, #F3E5AB, #996515) 1;
+        }
 
-    /* Glassmorphism Cards */
-    .glass-card {
-      background: rgba(255, 255, 255, 0.82);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      border: 1px solid rgba(212, 175, 55, 0.35);
-      box-shadow: 0 15px 35px -10px rgba(59, 2, 11, 0.12), 0 5px 15px -5px rgba(0, 0, 0, 0.04);
-    }
+        .gold-text-gradient {
+            background: linear-gradient(135deg, #FFE082 0%, #D4AF37 50%, #B8860B 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
 
-    .dark-glass-card {
-      background: rgba(59, 2, 11, 0.92);
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
-      border: 1px solid rgba(212, 175, 55, 0.4);
-      box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.35);
-    }
+        .gold-text-glow {
+            text-shadow: 0 0 12px rgba(212, 175, 55, 0.5);
+        }
 
-    /* Dynamic font scaling system */
-    :root {
-      --font-scale: 1;
-    }
-    .scalable-text {
-      font-size: calc(1rem * var(--font-scale));
-    }
-    .scalable-heading {
-      font-size: calc(1.5rem * var(--font-scale));
-    }
+        /* Halo Animation behind Divine Frame */
+        @keyframes haloPulse {
+            0%, 100% { transform: scale(1); opacity: 0.55; }
+            50% { transform: scale(1.06); opacity: 0.85; }
+        }
 
-    /* Divine Frame Border Styling */
-    .divine-border {
-      position: relative;
-      border: 3px solid transparent;
-      background: linear-gradient(white, white) padding-box,
-                  linear-gradient(135deg, #D4AF37, #FF6D00, #D4AF37) border-box;
-    }
+        .halo-glow {
+            animation: haloPulse 5s infinite ease-in-out;
+            background: radial-gradient(circle, rgba(255, 183, 77, 0.4) 0%, rgba(212, 175, 55, 0.15) 50%, rgba(0,0,0,0) 70%);
+        }
 
-    .divine-border-dark {
-      position: relative;
-      border: 3px solid transparent;
-      background: linear-gradient(#3B020B, #3B020B) padding-box,
-                  linear-gradient(135deg, #D4AF37, #FFE082, #D4AF37) border-box;
-    }
+        /* Royal Pattern Overlay */
+        .royal-pattern {
+            background-color: #3B020B;
+            background-image: radial-gradient(#D4AF37 0.65px, transparent 0.65px), radial-gradient(#D4AF37 0.65px, #3B020B 0.65px);
+            background-size: 26px 26px;
+            background-position: 0 0, 13px 13px;
+            background-opacity: 0.08;
+        }
 
-    /* Modal Zoom Transition */
-    .zoom-content {
-      transition: transform 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    }
-  </style>
+        /* Smooth Translation Transition */
+        .trans-fade {
+            transition: opacity 0.25s ease-in-out, transform 0.25s ease-in-out;
+        }
+    </style>
 </head>
+<body class="bg-cream text-charcoal font-sans antialiased min-h-screen flex flex-col selection:bg-saffron selection:text-white">
 
-<body class="text-gray-900 font-body antialiased min-h-screen flex flex-col justify-between selection:bg-gold-600 selection:text-white pb-20 md:pb-8">
-
-  <!-- TOP ANNOUNCEMENT & ACCESSIBILITY TOOLBAR -->
-  <header class="bg-maroon-900 text-gold-200 text-xs md:text-sm py-2 px-4 border-b border-gold-600/40 shadow-md">
-    <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-2">
-      
-      <!-- Trust Establishment Badge -->
-      <div class="flex items-center gap-2 font-medium">
-        <span class="inline-block w-2 h-2 rounded-full bg-saffron-500 animate-ping"></span>
-        <span class="tracking-wide">स्थापना: <strong class="text-gold-400 font-semibold">लाडी सत्योति ट्रस्ट 1932</strong></span>
-        <span class="hidden sm:inline text-gold-600">|</span>
-        <span class="hidden sm:inline text-ivory-200/80">संरक्षक: पुरी परिवार वंश परंपरा</span>
-      </div>
-
-      <!-- Quick Accessibility & Sound Controls -->
-      <div class="flex items-center gap-3 ml-auto">
-        
-        <!-- Sound Chime Toggle -->
-        <button id="soundToggleBtn" onclick="toggleTempleChime()" class="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-maroon-800 hover:bg-maroon-700 text-gold-300 border border-gold-600/30 transition-all text-xs font-semibold" title="पावन घंटी ध्वनि चलाएं / बंद करें">
-          <svg id="bellIcon" class="w-3.5 h-3.5 text-gold-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"></path>
-          </svg>
-          <span id="soundBtnText">ॐ ध्वनि</span>
-        </button>
-
-        <!-- Font Size Adjusters -->
-        <div class="flex items-center bg-maroon-950 rounded-lg p-0.5 border border-gold-600/30 text-xs">
-          <button onclick="changeFontSize(-0.1)" class="px-2 py-0.5 hover:text-white transition font-bold" title="अक्षर छोटे करें">A-</button>
-          <button onclick="resetFontSize()" class="px-1.5 py-0.5 border-x border-gold-600/30 hover:text-white transition" title="मूल आकार">A</button>
-          <button onclick="changeFontSize(0.1)" class="px-2 py-0.5 hover:text-white transition font-bold" title="अक्षर बड़े करें">A+</button>
-        </div>
-
-        <!-- Share Button -->
-        <button onclick="sharePage()" class="p-1.5 rounded-lg bg-maroon-800 hover:bg-maroon-700 text-gold-300 transition" title="शेयर करें">
-          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 100-2.684 3 3 0 000 2.684m0 6a3 3 0 100-2.684 3 3 0 000 2.684"></path>
-          </svg>
-        </button>
-      </div>
-
-    </div>
-  </header>
-
-  <!-- MAIN SACRED HEADER -->
-  <section class="relative pt-8 pb-6 px-4 text-center overflow-hidden border-b border-gold-600/20">
-    
-    <!-- Background Divine Halo Effect -->
-    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gold-400/10 rounded-full blur-3xl pointer-events-none"></div>
-    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-5xl h-32 bg-gradient-to-b from-gold-500/10 to-transparent pointer-events-none"></div>
-
-    <div class="max-w-5xl mx-auto relative z-10">
-      
-      <!-- Animated Sacred OM Icon -->
-      <div class="inline-block relative mb-2">
-        <div class="absolute inset-0 bg-saffron-500 rounded-full blur-xl opacity-40 animate-aura-pulse"></div>
-        <div class="relative w-16 h-16 md:w-20 md:h-20 mx-auto rounded-full bg-gradient-to-br from-maroon-800 to-maroon-950 border-2 border-gold-400 flex items-center justify-center shadow-2xl shadow-saffron-500/20 transform hover:scale-105 transition-transform duration-300">
-          <span class="font-heading text-3xl md:text-4xl text-gold-300 drop-shadow-md">ॐ</span>
-        </div>
-      </div>
-
-      <!-- Main Heading Title -->
-      <h1 class="font-heading text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-maroon-900 tracking-wide mt-2 mb-4 drop-shadow-sm">
-        वंशावली कौम पूरीयां
-      </h1>
-
-      <p class="font-devanagari text-maroon-800 font-medium text-base sm:text-lg mb-6 max-w-2xl mx-auto">
-        श्री देवी लाडी सत्योति जी का पावन इतिहास, कुल मर्यादा एवं वंश अभिलेखागार
-      </p>
-
-      <!-- Sacred Couplets (दोहा / चौपाई Cards) -->
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-4xl mx-auto text-left">
-        
-        <!-- Couplet 1 -->
-        <div class="dark-glass-card rounded-2xl p-4 md:p-5 text-gold-100 border-l-4 border-l-gold-500 relative overflow-hidden group hover:border-gold-300 transition-all">
-          <div class="absolute top-0 right-0 transform translate-x-2 -translate-y-2 text-gold-500/10 font-heading text-6xl pointer-events-none group-hover:text-gold-500/20 transition">
-            ॐ
-          </div>
-          <p class="font-devanagari text-base md:text-lg leading-relaxed text-gold-200">
-            "पुरी कुल को अगर है शान कोई ।<br/>
-            <strong class="text-gold-400 font-semibold">तो वह लाडी सती एक सत्योति है ।</strong>"
-          </p>
-        </div>
-
-        <!-- Couplet 2 -->
-        <div class="dark-glass-card rounded-2xl p-4 md:p-5 text-gold-100 border-l-4 border-l-saffron-500 relative overflow-hidden group hover:border-saffron-400 transition-all">
-          <div class="absolute top-0 right-0 transform translate-x-2 -translate-y-2 text-saffron-500/10 font-heading text-6xl pointer-events-none group-hover:text-saffron-500/20 transition">
-            जय
-          </div>
-          <p class="font-devanagari text-base md:text-lg leading-relaxed text-gold-200">
-            "पुरी कुल का अगर है मान कोई ।<br/>
-            <strong class="text-saffron-400 font-semibold">हमारे लिए दुर्गा महामाया सती है ।</strong>"
-          </p>
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-  <!-- MOBILE VIEW NAVIGATION SWITCHER (Visible on Mobile Screens < md) -->
-  <div class="md:hidden sticky top-0 z-40 bg-maroon-900/95 backdrop-blur-md px-3 py-2.5 border-b border-gold-600/40 shadow-lg">
-    <div class="flex rounded-xl bg-maroon-950 p-1 border border-gold-600/30 text-xs font-semibold">
-      
-      <button id="tab-btn-history" onclick="switchMobileTab('history')" class="flex-1 py-2 px-2 rounded-lg text-center transition-all bg-gradient-to-r from-gold-600 to-gold-700 text-maroon-950 font-bold shadow">
-        1. इतिहास & आस्था
-      </button>
-
-      <button id="tab-btn-portrait" onclick="switchMobileTab('portrait')" class="flex-1 py-2 px-2 rounded-lg text-center transition-all text-gold-300 hover:text-white">
-        2. पावन स्वरूप
-      </button>
-
-      <button id="tab-btn-genealogy" onclick="switchMobileTab('genealogy')" class="flex-1 py-2 px-2 rounded-lg text-center transition-all text-gold-300 hover:text-white">
-        3. वंशावली विवरण
-      </button>
-
-    </div>
-  </div>
-
-  <!-- MAIN CONTENT CONTAINER (3-COL DESKTOP / 2-COL TABLET / FLUID MOBILE) -->
-  <main class="max-w-7xl mx-auto px-4 py-8 md:py-12 flex-grow w-full">
-    
-    <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
-      
-      <!-- ================= SECTION 1: HISTORY & FAITH ================= -->
-      <!-- Desktop: Left 4 cols | Tablet: 6 cols | Mobile: Tab 1 -->
-      <section id="sec-history" class="md:col-span-6 lg:col-span-4 space-y-6 transition-all duration-300">
-        
-        <!-- History Main Card -->
-        <div class="glass-card rounded-3xl p-6 border-t-4 border-t-maroon-800 shadow-xl relative">
-          
-          <!-- Section Title -->
-          <div class="flex items-center justify-between pb-3 mb-4 border-b border-gold-600/30">
-            <h2 class="font-heading text-xl md:text-2xl text-maroon-900 flex items-center gap-2">
-              <span class="w-3 h-3 rounded-full bg-maroon-800 inline-block"></span>
-              इतिहास एवं पावन श्रद्धा
-            </h2>
-            <button onclick="copySectionText('historyContent')" class="text-xs text-maroon-700 hover:text-maroon-900 bg-amber-100 hover:bg-amber-200 px-2.5 py-1 rounded-full font-medium transition flex items-center gap-1" title="पाठ प्रतिलिपि बनाएं">
-              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
-              कॉपी
-            </button>
-          </div>
-
-          <!-- Article Text -->
-          <div id="historyContent" class="space-y-4 text-gray-800 leading-relaxed scalable-text font-devanagari text-justify">
-            <p class="first-letter:text-3xl first-letter:font-heading first-letter:text-maroon-900 first-letter:mr-1">
-              पुरी खानदान की कुंवारी लड़की लाडी सपुत्री श्री ईशर राय पूरी जिस की सगाई चिमयारी जिला अमृतसर के भण्डारी खानदान के लड़के श्री जसवन्त राय से हुई हुई थी। 
-            </p>
-
-            <p class="p-3.5 bg-amber-50/80 rounded-2xl border-l-4 border-saffron-500 text-maroon-900 font-medium">
-              देवी लाडी का मंगेतर स्वर्गवास हो गया। देवी लाडी उसकी पगड़ी गोद में लेकर सती हो गई थी।
-            </p>
-
-            <p>
-              पुरी इस सती को बड़ी श्रद्धा से पूजते हैं। इसके स्थान पर आ कर अपने बच्चों के मुण्डन संस्कार करते हैं। इस सती के नाम पर <strong class="text-maroon-900 font-bold bg-gold-200/60 px-1.5 py-0.5 rounded">लाडी सत्योति ट्रस्ट 1932</strong> से कायम है।
-            </p>
-          </div>
-
-          <!-- Historical Context Badge -->
-          <div class="mt-6 pt-4 border-t border-amber-200/60 flex items-center gap-3">
-            <div class="w-10 h-10 rounded-xl bg-maroon-900 text-gold-300 flex items-center justify-center font-heading text-lg shrink-0">
-              1932
-            </div>
-            <div class="text-xs text-gray-600">
-              <p class="font-bold text-maroon-900">लाडी सत्योति ट्रस्ट</p>
-              <p>निरंतर 90 से अधिक वर्षों से कुल परंपरा का संरक्षण</p>
-            </div>
-          </div>
-
-        </div>
-
-        <!-- Migration & Diaspora Notice Card -->
-        <div class="glass-card rounded-3xl p-6 border-t-4 border-t-saffron-600 shadow-lg bg-gradient-to-br from-white via-amber-50/40 to-orange-50/30">
-          
-          <h3 class="font-heading text-lg text-saffron-700 mb-3 flex items-center gap-2">
-            <svg class="w-5 h-5 text-saffron-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
-            बिरादरी संपर्क एवं एकता संदेश
-          </h3>
-
-          <p class="text-gray-800 text-sm md:text-base leading-relaxed scalable-text font-devanagari text-justify">
-            पुरी बिरादरी इन दिनों रोजगार की तलाश में और पंजाब की आबादी की तबादला की वजह से दूर-दराज भिन्न-भिन्न शहरों में आबाद हो गये हैं। जिस की वजह से आपस में मेल मिलाप और जान पहचान खत्म होती जा रही है।
-          </p>
-
-          <div class="mt-4 p-3 rounded-xl bg-saffron-50 border border-saffron-200 text-xs text-saffron-900 font-semibold text-center">
-            डिजिटल माध्यम द्वारा पूरी परिवार को पुनः एक सूत्र में पिरोने का प्रयास
-          </div>
-
-        </div>
-
-      </section>
-
-      <!-- ================= SECTION 2: CENTER DIVINE PORTRAIT ================= -->
-      <!-- Desktop: Center 4 cols | Tablet: Full row/hero | Mobile: Tab 2 -->
-      <section id="sec-portrait" class="md:col-span-12 lg:col-span-4 flex flex-col items-center justify-center transition-all duration-300">
-        
-        <div class="w-full max-w-md mx-auto relative group">
-          
-          <!-- Outer Aura Glow -->
-          <div class="absolute -inset-2 bg-gradient-to-r from-gold-500 via-saffron-500 to-gold-600 rounded-3xl blur-2xl opacity-60 group-hover:opacity-90 animate-aura-pulse transition-opacity duration-500"></div>
-
-          <!-- Main Portrait Card Container -->
-          <div class="relative dark-glass-card rounded-3xl p-4 md:p-5 divine-border-dark text-center shadow-2xl overflow-hidden">
+    <header class="sticky top-0 z-40 bg-imperial/95 backdrop-blur-md border-b-2 border-gold/40 text-cream shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2.5 flex items-center justify-between gap-2">
             
-            <!-- Top Frame Title Header -->
-            <div class="flex items-center justify-between pb-3 mb-3 border-b border-gold-600/30">
-              <span class="text-xs text-gold-400 font-heading tracking-widest uppercase">पावन चित्र दर्शन</span>
-              <span class="text-xs bg-saffron-600/80 text-white px-2.5 py-0.5 rounded-full font-bold">जयंती स्थल</span>
-            </div>
-
-            <!-- Image Frame Container -->
-            <div class="relative rounded-2xl overflow-hidden cursor-pointer shadow-2xl border-2 border-gold-500/60 bg-maroon-950 group-hover:border-gold-300 transition-all duration-300" onclick="openLightbox()">
-              
-              <!-- Divine Image Source with Fallback -->
-              <img 
-                id="mainDivineImg"
-                src="./resource/image.png" 
-                alt="श्री देवी लाडी सत्योति जी" 
-                class="w-full h-auto max-h-[520px] object-cover object-top rounded-xl transform group-hover:scale-105 transition-transform duration-700 ease-out"
-                onerror="handleImageError(this)"
-              />
-
-              <!-- Hover View Button Overlay -->
-              <div class="absolute inset-0 bg-gradient-to-t from-maroon-950 via-maroon-950/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-end p-6">
-                <span class="bg-gold-500 text-maroon-950 font-bold px-4 py-2 rounded-full text-xs md:text-sm shadow-xl flex items-center gap-2 transform translate-y-4 group-hover:translate-y-0 transition-transform">
-                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"></path></svg>
-                  विशाल दर्शन (Zoom Lightbox)
-                </span>
-              </div>
-
-              <!-- Top Left Sacred Ribbon -->
-              <div class="absolute top-3 left-3 bg-maroon-900/90 backdrop-blur-md text-gold-300 border border-gold-500/50 text-[10px] uppercase font-bold tracking-wider px-2.5 py-1 rounded-full shadow">
-                अधिष्ठात्री देवी
-              </div>
-
-            </div>
-
-            <!-- Bottom Devotional Caption Banner -->
-            <div class="mt-4 pt-2">
-              <div class="bg-gradient-to-r from-maroon-800 via-saffron-700 to-maroon-800 text-gold-200 font-heading text-lg md:text-xl py-2.5 px-4 rounded-xl border border-gold-500/40 shadow-inner flex items-center justify-center gap-2">
-                <span>✦</span>
-                <span>जय देवी लाडी सत्योति</span>
-                <span>✦</span>
-              </div>
-              <p class="text-xs text-gold-300/80 mt-2 font-devanagari">
-                चित्र पर क्लिक करके पूर्ण आकार में दर्शन करें
-              </p>
-            </div>
-
-          </div>
-
-        </div>
-
-      </section>
-
-      <!-- ================= SECTION 3: GENEALOGY & TRUST DETAILS ================= -->
-      <!-- Desktop: Right 4 cols | Tablet: 6 cols | Mobile: Tab 3 -->
-      <section id="sec-genealogy" class="md:col-span-6 lg:col-span-4 space-y-6 transition-all duration-300">
-        
-        <!-- Genealogy Preservation Detail Card -->
-        <div class="glass-card rounded-3xl p-6 border-t-4 border-t-gold-600 shadow-xl relative">
-          
-          <div class="flex items-center justify-between pb-3 mb-4 border-b border-gold-600/30">
-            <h2 class="font-heading text-xl md:text-2xl text-maroon-900 flex items-center gap-2">
-              <span class="w-3 h-3 rounded-full bg-gold-600 inline-block"></span>
-              वंशावली संरक्षण एवं शोध
-            </h2>
-            <button onclick="copySectionText('genealogyContent')" class="text-xs text-maroon-700 hover:text-maroon-900 bg-amber-100 hover:bg-amber-200 px-2.5 py-1 rounded-full font-medium transition flex items-center gap-1">
-              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2 2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
-              कॉपी
+            <!-- Left: Temple Bell Synthesizer Button -->
+            <button onclick="playTempleBell()" class="flex items-center gap-2 bg-maroonDark hover:bg-saffronDark text-goldLight hover:text-white border border-gold/40 px-3 py-1.5 rounded-full text-xs sm:text-sm font-medium transition duration-200 shadow-md active:scale-95" title="Ring Temple Bell">
+                <i class="fa-solid font-bell fa-bell text-saffron animate-bounce"></i>
+                <span id="nav-bell-text" class="hidden sm:inline">पावन घंटी बजाएं</span>
+                <span class="sm:hidden">घंटी</span>
             </button>
-          </div>
 
-          <div id="genealogyContent" class="space-y-4 text-gray-800 leading-relaxed scalable-text font-devanagari text-justify">
-            <p>
-              इस जान पहचान को कायम रखने के लिए बड़ी कोशिश और मेहनत से यह वंशावली हरिद्वार के परोहित पण्डित जोगिन्दर पाल दोहता पण्डित मखन लाल, परोहित कांगड़ा राम मोहल्ला चक्रवर्ती कुरुक्षेत्र व पण्डित रखा राम शास्त्री पेहवा और साहसी कौम पूरीया को वहीयों से और महकमा माल के कागजों से दरयाफ्त करके तैयार किया गया है।
+            <!-- Center: Sacred Title Badge -->
+            <div class="flex items-center gap-1.5 text-gold text-sm sm:text-base font-hindiTitle font-bold tracking-widest">
+                <span class="text-saffron text-lg">ॐ</span>
+                <span id="nav-sacred-motto" class="text-xs sm:text-sm font-semibold tracking-normal text-goldLight">॥ श्री लाडी सत्योति देव्यै नमः ॥</span>
+            </div>
+
+            <!-- Right: Accessibility Controls & Language Switcher -->
+            <div class="flex items-center gap-2">
+                <!-- Text Scale Buttons -->
+                <div class="hidden md:flex items-center bg-maroonDark border border-gold/30 rounded-lg p-0.5 text-xs text-goldLight">
+                    <button onclick="adjustFontSize(-1)" class="px-2 py-1 hover:bg-gold/20 rounded" title="Decrease Text Size">A-</button>
+                    <button onclick="resetFontSize()" class="px-2 py-1 hover:bg-gold/20 rounded font-bold" title="Reset Text Size">A</button>
+                    <button onclick="adjustFontSize(1)" class="px-2 py-1 hover:bg-gold/20 rounded" title="Increase Text Size">A+</button>
+                </div>
+
+                <!-- Share Button -->
+                <button onclick="shareWebsite()" class="p-2 bg-maroonDark hover:bg-gold/20 text-gold rounded-full border border-gold/30 transition" title="Share Page">
+                    <i class="fa-solid fa-share-nodes text-xs sm:text-sm"></i>
+                </button>
+
+                <!-- Language Toggle Button -->
+                <button id="lang-toggle-btn" onclick="toggleLanguage()" class="flex items-center gap-1.5 bg-gradient-to-r from-gold to-goldDark hover:from-saffron hover:to-saffronDark text-imperial font-bold px-3 py-1.5 rounded-full text-xs sm:text-sm transition duration-300 shadow-lg border border-goldLight active:scale-95">
+                    <i class="fa-solid fa-globe text-xs"></i>
+                    <span id="lang-btn-label">English</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <section class="royal-pattern relative text-cream py-8 sm:py-12 px-4 border-b-4 border-gold shadow-xl">
+        <div class="max-w-5xl mx-auto text-center space-y-4">
+            
+            <!-- Om Symbol Decorative Badge -->
+            <div class="inline-flex items-center justify-center w-14 h-14 rounded-full bg-imperial border-2 border-gold text-gold text-2xl font-bold shadow-gold-glow mb-1">
+                ॐ
+            </div>
+
+            <!-- Main Grand Title -->
+            <h1 id="hero-title" class="font-hindiTitle text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-gold font-bold tracking-wide drop-shadow-md gold-text-gradient">
+                वंशावली कौम पूरीयां
+            </h1>
+
+            <p id="hero-subtitle" class="text-saffron font-medium text-sm sm:text-lg md:text-xl tracking-wider uppercase">
+                लाडी सत्योति ट्रस्ट (बटाला) - पावन ऐतिहासिक संरक्षण
             </p>
-          </div>
 
-          <!-- Historical Sources Grid Badges -->
-          <div class="mt-5 grid grid-cols-2 gap-2 text-xs">
-            <div class="p-2.5 bg-amber-100/70 rounded-xl border border-amber-300 text-maroon-900 font-semibold flex items-center gap-1.5">
-              <span class="text-saffron-600">📜</span> हरिद्वार वंशावली वही
-            </div>
-            <div class="p-2.5 bg-amber-100/70 rounded-xl border border-amber-300 text-maroon-900 font-semibold flex items-center gap-1.5">
-              <span class="text-saffron-600">🏛️</span> महकमा माल कागजात
-            </div>
-            <div class="p-2.5 bg-amber-100/70 rounded-xl border border-amber-300 text-maroon-900 font-semibold flex items-center gap-1.5">
-              <span class="text-saffron-600">🔱</span> कुरुक्षेत्र पुरोहित रिकॉर्ड
-            </div>
-            <div class="p-2.5 bg-amber-100/70 rounded-xl border border-amber-300 text-maroon-900 font-semibold flex items-center gap-1.5">
-              <span class="text-saffron-600">🚩</span> पेहवा तीर्थ अभिलेख
-            </div>
-          </div>
+            <!-- Devotional Couplets Card -->
+            <div class="mt-6 p-4 sm:p-6 bg-maroonDark/80 border-2 border-gold/40 rounded-2xl max-w-3xl mx-auto shadow-2xl relative overflow-hidden">
+                <div class="absolute -top-6 -left-6 w-12 h-12 border-t-2 border-l-2 border-gold rounded-tl-xl opacity-60"></div>
+                <div class="absolute -bottom-6 -right-6 w-12 h-12 border-b-2 border-r-2 border-gold rounded-br-xl opacity-60"></div>
 
+                <p id="hero-couplet-1" class="font-hindiBody text-goldLight text-base sm:text-lg italic leading-relaxed">
+                    "वंशदीप प्रज्वलित रहे, सत्य सनातन धाम।<br>लाडी सत्योति चरणों में, कोटि-कोटि प्रणाम॥"
+                </p>
+            </div>
         </div>
+    </section>
 
-        <!-- Sevadar Card -->
-        <div class="dark-glass-card rounded-3xl p-5 border-l-4 border-l-gold-400 text-gold-100 shadow-lg">
-          <div class="flex items-start gap-3">
-            <div class="w-10 h-10 rounded-full bg-gold-500/20 text-gold-400 flex items-center justify-center text-xl shrink-0 border border-gold-500/40">
-              ✍️
-            </div>
-            <div class="space-y-1">
-              <span class="text-xs text-gold-400 font-bold tracking-wider uppercase">ऐतिहासिक सेवादार</span>
-              <h4 class="font-heading text-lg text-gold-200">हकीम कर्म चन्द पूरी</h4>
-              <p class="text-xs text-gold-300/80 font-devanagari">सेवादार कौम पूरीयां (बटाला, 28-9-1954)</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Trustee Contact Card -->
-        <div class="glass-card rounded-3xl p-5 border border-maroon-800/20 shadow-lg bg-gradient-to-br from-amber-50 to-white">
-          <div class="flex items-start gap-3">
-            <div class="w-10 h-10 rounded-full bg-maroon-900 text-gold-300 flex items-center justify-center text-xl shrink-0 shadow">
-              📇
-            </div>
-            <div class="space-y-1">
-              <span class="text-xs text-maroon-800 font-bold tracking-wider uppercase">वंशावली प्राप्ति संपर्क</span>
-              <p class="text-sm md:text-base font-semibold text-maroon-950 font-devanagari">
-                जिस किसी को वंशावली की जरूरत हो, वो <strong class="text-maroon-800 underline decoration-gold-500">श्री रघुवीर चन्द पूरी</strong> (सैक्रेटरी ट्रस्ट) से प्राप्त कर सकते हैं।
-              </p>
-            </div>
-          </div>
-        </div>
-
-      </section>
-
-    </div>
-
-  </main>
-
-  <!-- FOOTER -->
-  <footer class="bg-maroon-950 text-gold-200/90 py-8 px-4 border-t-2 border-gold-500/40 mt-12 relative">
-    <div class="max-w-5xl mx-auto text-center space-y-3">
-      <div class="text-2xl font-heading text-gold-400">
-        ॥ जय देवी लाडी सत्योति ॥
-      </div>
-      <p class="text-xs sm:text-sm text-gold-300/70 font-devanagari max-w-xl mx-auto">
-        वंश परंपरा एवं पारिवारिक इतिहास का यह डिजिटल संस्करण लाडी सत्योति ट्रस्ट द्वारा संरक्षित है।
-      </p>
-      <div class="pt-4 border-t border-maroon-800 text-[11px] text-gold-400/50 flex flex-col sm:flex-row justify-between items-center gap-2">
-        <p>© 1932 - 2026 लाडी सत्योति ट्रस्ट (Puri Family Lineage)</p>
-        <p class="hover:text-gold-300 cursor-pointer" onclick="scrollToTop()">▲ शीर्ष पर जाएं</p>
-      </div>
-    </div>
-  </footer>
-
-  <!-- MOBILE FLOATING BOTTOM ACTION BAR (< md) -->
-  <div class="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-maroon-950/95 backdrop-blur-lg border-t border-gold-500/40 px-4 py-2.5 shadow-2xl flex justify-around items-center">
-    
-    <!-- Sound Toggle -->
-    <button onclick="toggleTempleChime()" class="flex flex-col items-center text-gold-300 hover:text-white text-[10px]">
-      <svg class="w-5 h-5 text-gold-400 mb-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"></path></svg>
-      <span>घंटी ध्वनि</span>
-    </button>
-
-    <!-- Zoom Image -->
-    <button onclick="openLightbox()" class="flex flex-col items-center text-gold-300 hover:text-white text-[10px]">
-      <svg class="w-5 h-5 text-gold-400 mb-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
-      <span>दर्शन (Zoom)</span>
-    </button>
-
-    <!-- Share -->
-    <button onclick="sharePage()" class="flex flex-col items-center text-gold-300 hover:text-white text-[10px]">
-      <svg class="w-5 h-5 text-gold-400 mb-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 100-2.684 3 3 0 000 2.684m0 6a3 3 0 100-2.684 3 3 0 000 2.684"></path></svg>
-      <span>शेयर</span>
-    </button>
-
-    <!-- Scroll Top -->
-    <button onclick="scrollToTop()" class="flex flex-col items-center text-gold-300 hover:text-white text-[10px]">
-      <svg class="w-5 h-5 text-gold-400 mb-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path></svg>
-      <span>शीर्ष</span>
-    </button>
-
-  </div>
-
-  <!-- FULLSCREEN LIGHTBOX MODAL -->
-  <div id="lightboxModal" class="fixed inset-0 z-50 bg-maroon-950/95 backdrop-blur-2xl hidden flex flex-col justify-between p-4 transition-all duration-300">
-    
-    <!-- Modal Top Bar -->
-    <div class="flex justify-between items-center max-w-6xl mx-auto w-full z-10 text-gold-300">
-      <div class="flex items-center gap-2">
-        <span class="font-heading text-lg text-gold-400">श्री देवी लाडी सत्योति</span>
-        <span class="text-xs bg-saffron-600/80 text-white px-2 py-0.5 rounded">पावन दर्शन</span>
-      </div>
-
-      <div class="flex items-center gap-3">
-        <!-- Zoom Controls -->
-        <button onclick="zoomModalImage(0.2)" class="p-2 rounded-full bg-maroon-800 hover:bg-maroon-700 text-gold-200" title="बड़ा करें">+</button>
-        <button onclick="resetModalZoom()" class="px-2.5 py-1 text-xs rounded-full bg-maroon-800 hover:bg-maroon-700 text-gold-200">Reset</button>
-        <button onclick="zoomModalImage(-0.2)" class="p-2 rounded-full bg-maroon-800 hover:bg-maroon-700 text-gold-200" title="छोटा करें">-</button>
+    <main class="flex-grow max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
         
-        <!-- Close Button -->
-        <button onclick="closeLightbox()" class="p-2 rounded-full bg-saffron-600 hover:bg-saffron-700 text-white font-bold text-lg ml-2" title="बंद करें">
-          ✕
-        </button>
-      </div>
+        <!-- 
+            MOBILE (<768px): Stacked vertical order -> History -> Divine Frame -> Genealogy
+            TABLET (768px-1024px): 2 Columns
+            DESKTOP (1024px+): 3 Columns (3 : 6 : 3)
+        -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 items-start">
+
+            <!-- ================= LEFT COLUMN / STACK 1: HISTORY & FAITH ================= -->
+            <section class="lg:col-span-3 order-1 bg-creamCard border-2 border-gold/40 rounded-2xl p-5 sm:p-6 shadow-card-soft hover:shadow-gold-glow transition duration-300 relative">
+                
+                <!-- Section Header -->
+                <div class="flex items-center gap-3 border-b-2 border-gold/30 pb-3 mb-4">
+                    <div class="w-9 h-9 rounded-lg bg-imperial flex items-center justify-center text-gold text-lg shadow">
+                        <i class="fa-solid fa-scroll"></i>
+                    </div>
+                    <div>
+                        <h2 id="hist-title" class="font-hindiTitle text-xl text-imperial font-bold">
+                            इतिहास एवं आस्था
+                        </h2>
+                        <span id="hist-badge" class="text-xs text-saffronDark font-semibold uppercase tracking-wider">
+                            1932 ई. स्थापित ट्रस्ट
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Text Content -->
+                <div class="space-y-4 text-xs sm:text-sm text-gray-800 leading-relaxed font-hindiBody">
+                    <p id="hist-p1">
+                        पूरी क्षत्रिय कुलीन वंशावली में जगज्जननी देवी लाडी सत्योति महाराज का स्थान परम पूजनीय एवं अद्वितीय है। पंजाब के ऐतिहासिक बटाला नगर से संबद्ध यह पावन स्थल सदियों से पूरी परिवार का आध्यात्मिक केंद्र रहा है।
+                    </p>
+
+                    <div class="p-3 bg-saffron/10 border-l-4 border-saffron rounded-r-lg italic text-maroonDark text-xs sm:text-sm">
+                        <p id="hist-p2">
+                            प्राचीन गाथा के अनुसार, भण्डारी परिवार में विवाह उपरांत देवी लाडी जी ने अपने अनन्य पतिव्रत एवं सत्य की रक्षा हेतु अग्नि-परीक्षण (सती) का मार्ग चुना। उनके इस महान त्याग एवं अलौकिक तपोबल ने समस्त पूरी वंश को अमर आशीर्वाद प्रदान किया।
+                        </p>
+                    </div>
+
+                    <p id="hist-p3">
+                        कुल परंपरानुसार, आज भी पूरी परिवार के नवजात शिशुओं का प्रथम मुंडन (चूड़ाकरण) संस्कार देवी जी के पावन चरणों में संपन्न होता है, जिससे वंश की रक्षा और सुख-समृद्धि बनी रहती है।
+                    </p>
+                </div>
+
+                <!-- Subtle Decorative Emblem -->
+                <div class="mt-6 pt-4 border-t border-gold/20 flex items-center justify-between text-xs text-goldDark font-semibold">
+                    <span id="hist-foot-label"><i class="fa-solid fa-om mr-1"></i> पावन परंपरा</span>
+                    <span>बटाला धाम</span>
+                </div>
+            </section>
+
+            <!-- ================= CENTER COLUMN / STACK 2: DIVINE PORTRAIT FRAME ================= -->
+            <section class="lg:col-span-6 md:col-span-2 order-2 flex flex-col items-center">
+                
+                <div class="w-full bg-gradient-to-b from-imperial via-maroonDark to-imperial border-4 border-gold rounded-3xl p-4 sm:p-8 shadow-gold-deep text-center relative overflow-hidden">
+                    
+                    <!-- Halo Glowing Background -->
+                    <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+                        <div class="w-72 h-72 sm:w-96 sm:h-96 rounded-full halo-glow"></div>
+                    </div>
+
+                    <!-- Top Decorative Title Badge -->
+                    <div class="relative z-10 inline-block bg-maroonDark/90 border-2 border-gold px-4 py-1.5 rounded-full text-gold text-xs sm:text-sm font-bold tracking-widest uppercase mb-4 shadow">
+                        <i class="fa-solid fa-crown text-saffron mr-1.5"></i>
+                        <span id="portrait-top-badge">परम पूजनीय श्री लाडी सत्योति देवी</span>
+                    </div>
+
+                    <!-- Gold Arched Image Container -->
+                    <div class="relative z-10 my-2 mx-auto max-w-sm sm:max-w-md group">
+                        <div class="p-2 sm:p-3 bg-gradient-to-b from-gold via-goldLight to-goldDark rounded-t-full rounded-b-2xl shadow-2xl">
+                            
+                            <div class="relative overflow-hidden rounded-t-full rounded-b-xl border-4 border-imperial bg-maroonDark cursor-pointer" onclick="openLightbox()">
+                                
+                                <!-- Primary Image (resource/image.png) with Graceful Fallback -->
+                                <img 
+                                    id="main-portrait" 
+                                    src="./resource/image.png" 
+                                    alt="देवी लाडी सत्योति - बटाला" 
+                                    onerror="handleImageError(this)" 
+                                    class="w-full h-auto max-h-[480px] object-cover object-center transform transition duration-500 group-hover:scale-105"
+                                />
+
+                                <!-- Hover Overlay Hint -->
+                                <div class="absolute inset-0 bg-imperial/40 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center text-white font-medium text-sm gap-2">
+                                    <i class="fa-solid fa-magnifying-glass-plus text-xl text-gold"></i>
+                                    <span id="hover-zoom-text">बड़ा करके देखें</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Portrait Caption Box -->
+                    <div class="relative z-10 mt-5 space-y-2">
+                        <h3 id="portrait-caption" class="font-hindiTitle text-xl sm:text-2xl text-gold font-bold tracking-wide">
+                            ॥ श्री जगज्जननी लाडी सत्योति देवी जी ॥
+                        </h3>
+                        <p id="portrait-subcaption" class="text-xs sm:text-sm text-goldLight/90 italic font-hindiBody">
+                            बटाला स्थित पावन मुख्य मंदिर स्वरूप
+                        </p>
+
+                        <!-- Action Buttons Row -->
+                        <div class="pt-4 flex flex-wrap justify-center gap-3">
+                            <button onclick="openLightbox()" class="flex items-center gap-2 bg-gradient-to-r from-gold to-goldDark hover:from-saffron hover:to-saffronDark text-imperial font-bold px-4 py-2 rounded-xl text-xs sm:text-sm transition duration-200 shadow-lg active:scale-95">
+                                <i class="fa-solid fa-expand"></i>
+                                <span id="btn-zoom-text">पूर्ण चित्र देखें</span>
+                            </button>
+
+                            <button onclick="playTempleBell()" class="flex items-center gap-2 bg-maroonDark hover:bg-gold/20 border border-gold text-goldLight px-4 py-2 rounded-xl text-xs sm:text-sm transition duration-200 active:scale-95">
+                                <i class="fa-solid fa-bell text-saffron"></i>
+                                <span id="btn-bell-text">जयकारा एवं घंटी</span>
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- ================= RIGHT COLUMN / STACK 3: GENEALOGY & RECORDS ================= -->
+            <section class="lg:col-span-3 order-3 bg-creamCard border-2 border-gold/40 rounded-2xl p-5 sm:p-6 shadow-card-soft hover:shadow-gold-glow transition duration-300 relative">
+                
+                <!-- Section Header -->
+                <div class="flex items-center gap-3 border-b-2 border-gold/30 pb-3 mb-4">
+                    <div class="w-9 h-9 rounded-lg bg-imperial flex items-center justify-center text-gold text-lg shadow">
+                        <i class="fa-solid fa-sitemap"></i>
+                    </div>
+                    <div>
+                        <h2 id="gen-title" class="font-hindiTitle text-xl text-imperial font-bold">
+                            वंशावली संरक्षण
+                        </h2>
+                        <span id="gen-badge" class="text-xs text-saffronDark font-semibold uppercase tracking-wider">
+                            प्रामाणिक शोध रिकॉर्ड
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Text Content -->
+                <div class="space-y-4 text-xs sm:text-sm text-gray-800 leading-relaxed font-hindiBody">
+                    <p id="gen-p1">
+                        पूरी कौम की ऐतिहासिक जड़ों को सुरक्षित करने हेतु हरिद्वार (उत्तराखंड), कुरुक्षेत्र एवं पेहोवा (हरियाणा) के तीर्थ पुरोहितों की प्राचीन बही-खातों एवं प्रामाणिक पण्डों के रिकॉर्ड्स से विस्तृत शोध किया गया है।
+                    </p>
+
+                    <div class="p-3 bg-imperial/5 border-l-4 border-imperial rounded-r-lg">
+                        <p id="gen-p2" class="font-semibold text-imperial">
+                            हकीम करम चन्द जी पूरी (बटाला, 28 सितंबर 1954) द्वारा संकलित ऐतिहासिक विवरणों के आधार पर पूरी गोत्र की विभिन्न शाखाओं का क्रमबद्ध इतिहास तैयार किया गया।
+                        </p>
+                    </div>
+
+                    <p id="gen-p3">
+                        वर्तमान में श्री रघुबीर चन्द जी पूरी (मानद सचिव) एवं ट्रस्ट मंडल इस धरोहर के जीर्णोद्धार और वंशावली के डिजिटलीकरण हेतु निरंतर सेवारत हैं।
+                    </p>
+                </div>
+
+                <!-- Contact & Notice Card -->
+                <div class="mt-6 p-3.5 bg-gradient-to-br from-maroonDark to-imperial rounded-xl border border-gold/40 text-cream space-y-2 text-xs">
+                    <div class="flex items-center gap-1.5 text-gold font-bold">
+                        <i class="fa-solid fa-address-book"></i>
+                        <span id="contact-head">पंजीकरण एवं सूचना</span>
+                    </div>
+                    <p id="contact-body" class="text-goldLight/90 leading-snug">
+                        पूरी परिवार के सदस्य अपनी वंशावली प्रविष्टियों एवं विवरण हेतु ट्रस्ट कार्यालय बटाला से संपर्क कर सकते हैं।
+                    </p>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- Lightbox Modal for Full Image Zoom -->
+    <div id="lightbox-modal" class="fixed inset-0 z-50 bg-black/90 backdrop-blur-md hidden flex items-center justify-center p-4 transition-opacity duration-300">
+        <div class="relative max-w-4xl w-full max-h-[90vh] flex flex-col items-center justify-center">
+            
+            <!-- Close Button -->
+            <button onclick="closeLightbox()" class="absolute -top-12 right-0 text-white hover:text-gold text-3xl font-bold p-2 transition">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <!-- Lightbox Image -->
+            <div class="p-2 bg-gradient-to-b from-gold via-goldLight to-goldDark rounded-2xl shadow-2xl">
+                <img id="modal-img" src="./resource/image.png" alt="देवी लाडी सत्योति" class="max-h-[80vh] w-auto object-contain rounded-xl border-2 border-imperial" />
+            </div>
+
+            <p id="modal-caption-text" class="text-gold text-sm sm:text-base font-hindiTitle mt-3 text-center">
+                देवी लाडी सत्योति - मुख्य मंदिर स्वरूप (बटाला)
+            </p>
+        </div>
     </div>
 
-    <!-- Modal Center Image Container -->
-    <div class="flex-grow flex items-center justify-center relative overflow-hidden my-4" id="modalImageContainer">
-      <img 
-        id="modalImage" 
-        src="./resource/image.png" 
-        alt="देवी लाडी सत्योति" 
-        class="zoom-content max-h-[80vh] max-w-[92vw] object-contain rounded-2xl shadow-2xl border-2 border-gold-500"
-      />
+    <!-- Toast Notification Message -->
+    <div id="toast-msg" class="fixed bottom-6 right-6 z-50 bg-maroonDark text-gold border-2 border-gold px-5 py-3 rounded-2xl shadow-2xl transform translate-y-20 opacity-0 transition-all duration-300 flex items-center gap-3 text-xs sm:text-sm">
+        <i class="fa-solid fa-circle-check text-saffron text-base"></i>
+        <span id="toast-text">सफलतापूर्वक निष्पादित</span>
     </div>
 
-    <!-- Modal Footer Caption -->
-    <div class="text-center text-gold-200 font-heading text-base md:text-xl pb-2">
-      जय देवी लाडी सत्योति की जय
-    </div>
+    <!-- Imperial Footer -->
+    <footer class="bg-maroonDark border-t-2 border-gold text-goldLight py-8 px-4 mt-auto">
+        <div class="max-w-7xl mx-auto text-center space-y-3 text-xs sm:text-sm font-hindiBody">
+            <div class="flex items-center justify-center gap-2 text-saffron text-lg font-bold">
+                <span>ॐ</span>
+                <span>॥ लाडी सत्योति शरणम् ॥</span>
+                <span>ॐ</span>
+            </div>
+            <p id="footer-copy">
+                © लाडी सत्योति ट्रस्ट, बटाला (पंजाब)। वंशावली कौम पूरीयां। सर्वाधिकार सुरक्षित।
+            </p>
+            <p id="footer-sub" class="text-gold/60 text-xs">
+                संरक्षण एवं संकलन: पूरी क्षत्रिय वंश धरोहर समिति
+            </p>
+        </div>
+    </footer>
 
-  </div>
+    <script>
+        const translations = {
+            hi: {
+                sacred_motto: "॥ श्री लाडी सत्योति देव्यै नमः ॥",
+                bell_btn: "पावन घंटी बजाएं",
+                hero_title: "वंशावली कौम पूरीयां",
+                hero_subtitle: "लाडी सत्योति ट्रस्ट (बटाला) - पावन ऐतिहासिक संरक्षण",
+                couplet_1: `"वंशदीप प्रज्वलित रहे, सत्य सनातन धाम।<br>लाडी सत्योति चरणों में, कोटि-कोटि प्रणाम॥"`,
+                
+                hist_title: "इतिहास एवं आस्था",
+                hist_badge: "1932 ई. स्थापित ट्रस्ट",
+                hist_p1: "पूरी क्षत्रिय कुलीन वंशावली में जगज्जननी देवी लाडी सत्योति महाराज का स्थान परम पूजनीय एवं अद्वितीय है। पंजाब के ऐतिहासिक बटाला नगर से संबद्ध यह पावन स्थल सदियों से पूरी परिवार का आध्यात्मिक केंद्र रहा है।",
+                hist_p2: "प्राचीन गाथा के अनुसार, भण्डारी परिवार में विवाह उपरांत देवी लाडी जी ने अपने अनन्य पतिव्रत एवं सत्य की रक्षा हेतु अग्नि-परीक्षण (सती) का मार्ग चुना। उनके इस महान त्याग एवं अलौकिक तपोबल ने समस्त पूरी वंश को अमर आशीर्वाद प्रदान किया।",
+                hist_p3: "कुल परंपरानुसार, आज भी पूरी परिवार के नवजात शिशुओं का प्रथम मुंडन (चूड़ाकरण) संस्कार देवी जी के पावन चरणों में संपन्न होता है, जिससे वंश की रक्षा और सुख-समृद्धि बनी रहती है।",
+                hist_foot: `<i class="fa-solid fa-om mr-1"></i> पावन परंपरा`,
 
-  <!-- TOAST NOTIFICATION CONTAINER -->
-  <div id="toastNotification" class="fixed top-16 right-4 z-50 transform translate-x-72 opacity-0 transition-all duration-300 bg-maroon-900 border border-gold-500 text-gold-200 px-4 py-2.5 rounded-2xl shadow-2xl flex items-center gap-2 text-sm font-medium">
-    <span id="toastIcon">✨</span>
-    <span id="toastMessage">कॉपी हो गया!</span>
-  </div>
+                portrait_badge: "परम पूजनीय श्री लाडी सत्योति देवी",
+                portrait_caption: "॥ श्री जगज्जननी लाडी सत्योति देवी जी ॥",
+                portrait_subcaption: "बटाला स्थित पावन मुख्य मंदिर स्वरूप",
+                hover_zoom: "बड़ा करके देखें",
+                btn_zoom: "पूर्ण चित्र देखें",
+                btn_bell: "जयकारा एवं घंटी",
 
-  <script>
-    /* Global Application State */
-    let currentFontScale = 1.0;
-    let currentZoom = 1.0;
-    let audioCtx = null;
-    let isChimePlaying = false;
-    let chimeInterval = null;
+                gen_title: "वंशावली संरक्षण",
+                gen_badge: "प्रामाणिक शोध रिकॉर्ड",
+                gen_p1: "पूरी कौम की ऐतिहासिक जड़ों को सुरक्षित करने हेतु हरिद्वार (उत्तराखंड), कुरुक्षेत्र एवं पेहोवा (हरियाणा) के तीर्थ पुरोहितों की प्राचीन बही-खातों एवं प्रामाणिक पण्डों के रिकॉर्ड्स से विस्तृत शोध किया गया है।",
+                gen_p2: "हकीम करम चन्द जी पूरी (बटाला, 28 सितंबर 1954) द्वारा संकलित ऐतिहासिक विवरणों के आधार पर पूरी गोत्र की विभिन्न शाखाओं का क्रमबद्ध इतिहास तैयार किया गया।",
+                gen_p3: "वर्तमान में श्री रघुबीर चन्द जी पूरी (मानद सचिव) एवं ट्रस्ट मंडल इस धरोहर के जीर्णोद्धार और वंशावली के डिजिटलीकरण हेतु निरंतर सेवारत हैं।",
+                contact_head: "पंजीकरण एवं सूचना",
+                contact_body: "पूरी परिवार के सदस्य अपनी वंशावली प्रविष्टियों एवं विवरण हेतु ट्रस्ट कार्यालय बटाला से संपर्क कर सकते हैं।",
 
-    /* Initialize Responsive Tab Behavior based on Window Width */
-    window.addEventListener('DOMContentLoaded', () => {
-      handleResizeLayout();
-      window.addEventListener('resize', handleResizeLayout);
-    });
+                footer_copy: "© लाडी सत्योति ट्रस्ट, बटाला (पंजाब)। वंशावली कौम पूरीयां। सर्वाधिकार सुरक्षित।",
+                footer_sub: "संरक्षण एवं संकलन: पूरी क्षत्रिय वंश धरोहर समिति",
+                toast_bell: "🔔 पावन मंदिर की घंटी बज रही है...",
+                toast_share: "🔗 वेबसाइट लिंक क्लिपबोर्ड पर कॉपी हो गया!"
+            },
+            en: {
+                sacred_motto: "॥ Shri Ladi Satyoti Devyai Namah ॥",
+                bell_btn: "Ring Temple Bell",
+                hero_title: "Lineage of the Puri Clan",
+                hero_subtitle: "Ladi Satyoti Trust (Batala) - Sacred Historical Heritage",
+                couplet_1: `"May the lineage lamp burn eternal in truth and dharma;<br>Millions of reverent obeisances at the feet of Devi Ladi Satyoti."`,
+                
+                hist_title: "History & Faith",
+                hist_badge: "Est. 1932 AD Trust",
+                hist_p1: "In the noble Puri Kshatriya lineage, Jagatjanani Devi Ladi Satyoti holds the most revered and supreme position. Associated with the historic town of Batala in Punjab, this sacred abode has been the spiritual focal point for the Puri family across generations.",
+                hist_p2: "According to sacred tradition, after her betrothal into the Bhandari family, Devi Ladi Ji embraced the path of ultimate truth and supreme sacrifice (Sati). Her divine penance and legendary spiritual power bestowed eternal blessings upon the entire Puri lineage.",
+                hist_p3: "Following ancestral custom, the first haircut ceremony (Mundan) of newborn infants in the Puri clan is performed at her holy feet to ensure health, longevity, and divine protection.",
+                hist_foot: `<i class="fa-solid fa-om mr-1"></i> Sacred Heritage`,
 
-    function handleResizeLayout() {
-      const width = window.innerWidth;
-      const historySec = document.getElementById('sec-history');
-      const portraitSec = document.getElementById('sec-portrait');
-      const genealogySec = document.getElementById('sec-genealogy');
+                portrait_badge: "Most Revered Shri Ladi Satyoti Devi",
+                portrait_caption: "॥ Shri Jagatjanani Ladi Satyoti Devi Ji ॥",
+                portrait_subcaption: "Sacred Main Temple Portrait located at Batala",
+                hover_zoom: "Click to Enlarge",
+                btn_zoom: "View Full Image",
+                btn_bell: "Chime & Praise",
 
-      if (width >= 768) {
-        // Desktop / Tablet view: show all sections simultaneously
-        historySec.classList.remove('hidden');
-        portraitSec.classList.remove('hidden');
-        genealogySec.classList.remove('hidden');
-      } else {
-        // Mobile view: default to tab 1 if no active state set
-        const activeTab = window.currentMobileTab || 'history';
-        switchMobileTab(activeTab);
-      }
-    }
+                gen_title: "Genealogy Preservation",
+                gen_badge: "Authentic Research Records",
+                gen_p1: "To preserve the historical roots of the Puri community, extensive research was conducted across ancient registers and authentic records maintained by pilgrimage pandas in Haridwar (Uttarakhand), Kurukshetra, and Pehowa (Haryana).",
+                gen_p2: "Based on historical accounts compiled by Hakim Karam Chand Puri (Batala, 28th September 1954), a systematic history of various branches of the Puri Gotra was documented.",
+                gen_p3: "Currently, Honorary Secretary Shri Raghubeer Chand Puri and the Trust Board are dedicatedly serving the restoration of this heritage and the digitization of the family lineage.",
+                contact_head: "Registration & Contact",
+                contact_body: "Members of the Puri family may contact the Trust Office at Batala for lineage additions and record verification.",
 
-    /* Mobile Tab Switcher Logic */
-    function switchMobileTab(tabName) {
-      if (window.innerWidth >= 768) return; // Keep visible on tablets/desktops
+                footer_copy: "© Ladi Satyoti Trust, Batala (Punjab). Lineage of the Puri Clan. All rights reserved.",
+                footer_sub: "Preservation & Compilation: Puri Kshatriya Heritage Board",
+                toast_bell: "🔔 Sacred Temple Bell is Chiming...",
+                toast_share: "🔗 Website URL copied to clipboard!"
+            }
+        };
 
-      window.currentMobileTab = tabName;
+        let currentLang = localStorage.getItem('puri_trust_lang') || 'hi';
+        let currentFontSize = 16;
 
-      const historySec = document.getElementById('sec-history');
-      const portraitSec = document.getElementById('sec-portrait');
-      const genealogySec = document.getElementById('sec-genealogy');
-
-      const btnHistory = document.getElementById('tab-btn-history');
-      const btnPortrait = document.getElementById('tab-btn-portrait');
-      const btnGenealogy = document.getElementById('tab-btn-genealogy');
-
-      // Hide all first
-      historySec.classList.add('hidden');
-      portraitSec.classList.add('hidden');
-      genealogySec.classList.add('hidden');
-
-      // Reset button styles
-      [btnHistory, btnPortrait, btnGenealogy].forEach(btn => {
-        btn.className = "flex-1 py-2 px-2 rounded-lg text-center transition-all text-gold-300 hover:text-white";
-      });
-
-      const activeBtnClass = "flex-1 py-2 px-2 rounded-lg text-center transition-all bg-gradient-to-r from-gold-600 to-gold-700 text-maroon-950 font-bold shadow";
-
-      if (tabName === 'history') {
-        historySec.classList.remove('hidden');
-        btnHistory.className = activeBtnClass;
-      } else if (tabName === 'portrait') {
-        portraitSec.classList.remove('hidden');
-        btnPortrait.className = activeBtnClass;
-      } else if (tabName === 'genealogy') {
-        genealogySec.classList.remove('hidden');
-        btnGenealogy.className = activeBtnClass;
-      }
-    }
-
-    /* Accessibility Font Size Adjuster */
-    function changeFontSize(delta) {
-      currentFontScale = Math.max(0.85, Math.min(1.4, currentFontScale + delta));
-      document.documentElement.style.setProperty('--font-scale', currentFontScale);
-      showToast(`अक्षर आकार: ${Math.round(currentFontScale * 100)}%`, '🔍');
-    }
-
-    function resetFontSize() {
-      currentFontScale = 1.0;
-      document.documentElement.style.setProperty('--font-scale', 1.0);
-      showToast(`मूल आकार बहाल`, '🔄');
-    }
-
-    /* Web Audio API Temple Bell Sound Synthesizer */
-    function playTempleBell() {
-      try {
-        if (!audioCtx) {
-          audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-        }
-        if (audioCtx.state === 'suspended') {
-          audioCtx.resume();
-        }
-
-        const now = audioCtx.currentTime;
-        
-        // Main Bell Fundamental & Harmonics
-        const freqs = [432, 864, 1296, 2160];
-        const gains = [0.4, 0.2, 0.1, 0.05];
-
-        freqs.forEach((freq, index) => {
-          const osc = audioCtx.createOscillator();
-          const gainNode = audioCtx.createGain();
-
-          osc.type = 'sine';
-          osc.frequency.setValueAtTime(freq, now);
-
-          // Exponential Decay Envelope for Brass Bell
-          gainNode.gain.setValueAtTime(gains[index], now);
-          gainNode.gain.exponentialRampToValueAtTime(0.0001, now + 3.5);
-
-          osc.connect(gainNode);
-          gainNode.connect(audioCtx.destination);
-
-          osc.start(now);
-          osc.stop(now + 3.6);
+        // Initialize state on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            applyLanguage(currentLang);
         });
-      } catch (e) {
-        console.log('Audio Context error or user gesture required', e);
-      }
-    }
 
-    function toggleTempleChime() {
-      const soundBtnText = document.getElementById('soundBtnText');
-      
-      if (!isChimePlaying) {
-        playTempleBell();
-        chimeInterval = setInterval(playTempleBell, 4500);
-        isChimePlaying = true;
-        soundBtnText.textContent = "घंटी चालू";
-        showToast("पावन घंटी ध्वनि प्रारंभ", "🔔");
-      } else {
-        clearInterval(chimeInterval);
-        isChimePlaying = false;
-        soundBtnText.textContent = "ॐ ध्वनि";
-        showToast("ध्वनि विराम", "🔕");
-      }
-    }
+        function toggleLanguage() {
+            currentLang = currentLang === 'hi' ? 'en' : 'hi';
+            localStorage.setItem('puri_trust_lang', currentLang);
+            applyLanguage(currentLang);
+        }
 
-    /* Copy Section Text with iFrame Fallback */
-    function copySectionText(elementId) {
-      const text = document.getElementById(elementId).innerText;
-      
-      try {
-        const textarea = document.createElement('textarea');
-        textarea.value = text;
-        document.body.appendChild(textarea);
-        textarea.select();
-        document.execCommand('copy');
-        document.body.removeChild(textarea);
-        showToast("पावन विवरण कॉपी हो गया!", "📋");
-      } catch (err) {
-        showToast("कॉपी में त्रुटि", "⚠️");
-      }
-    }
+        function applyLanguage(lang) {
+            const dict = translations[lang];
+            document.documentElement.lang = lang;
 
-    /* Page Sharing Feature */
-    function sharePage() {
-      if (navigator.share) {
-        navigator.share({
-          title: 'लाडी सत्योति ट्रस्ट | वंशावली कौम पूरीयां',
-          text: 'श्री देवी लाडी सत्योति जी का पावन इतिहास एवं पूरी परिवार वंशावली विवरण।',
-          url: window.location.href,
-        }).catch(() => {});
-      } else {
-        copySectionText('historyContent');
-      }
-    }
+            // Language Switcher Button Label
+            const btnLabel = document.getElementById('lang-btn-label');
+            if (btnLabel) {
+                btnLabel.textContent = lang === 'hi' ? 'English' : 'हिंदी';
+            }
 
-    /* Toast Notification Helper */
-    function showToast(msg, icon = '✨') {
-      const toast = document.getElementById('toastNotification');
-      document.getElementById('toastMessage').innerText = msg;
-      document.getElementById('toastIcon').innerText = icon;
+            // Update Text Content
+            setElText('nav-sacred-motto', dict.sacred_motto);
+            setElText('nav-bell-text', dict.bell_btn);
+            setElText('hero-title', dict.hero_title);
+            setElText('hero-subtitle', dict.hero_subtitle);
+            setElHtml('hero-couplet-1', dict.couplet_1);
 
-      toast.classList.remove('translate-x-72', 'opacity-0');
-      toast.classList.add('translate-x-0', 'opacity-100');
+            setElText('hist-title', dict.hist_title);
+            setElText('hist-badge', dict.hist_badge);
+            setElText('hist-p1', dict.hist_p1);
+            setElText('hist-p2', dict.hist_p2);
+            setElText('hist-p3', dict.hist_p3);
+            setElHtml('hist-foot-label', dict.hist_foot);
 
-      setTimeout(() => {
-        toast.classList.remove('translate-x-0', 'opacity-100');
-        toast.classList.add('translate-x-72', 'opacity-0');
-      }, 2500);
-    }
+            setElText('portrait-top-badge', dict.portrait_badge);
+            setElText('portrait-caption', dict.portrait_caption);
+            setElText('portrait-subcaption', dict.portrait_subcaption);
+            setElText('hover-zoom-text', dict.hover_zoom);
+            setElText('btn-zoom-text', dict.btn_zoom);
+            setElText('btn-bell-text', dict.btn_bell);
 
-    /* Lightbox Modal Functions */
-    function openLightbox() {
-      document.getElementById('lightboxModal').classList.remove('hidden');
-      document.body.style.overflow = 'hidden';
-      resetModalZoom();
-      playTempleBell();
-    }
+            setElText('gen-title', dict.gen_title);
+            setElText('gen-badge', dict.gen_badge);
+            setElText('gen-p1', dict.gen_p1);
+            setElText('gen-p2', dict.gen_p2);
+            setElText('gen-p3', dict.gen_p3);
+            setElText('contact-head', dict.contact_head);
+            setElText('contact-body', dict.contact_body);
 
-    function closeLightbox() {
-      document.getElementById('lightboxModal').classList.add('hidden');
-      document.body.style.overflow = 'auto';
-    }
+            setElText('footer-copy', dict.footer_copy);
+            setElText('footer-sub', dict.footer_sub);
+            setElText('modal-caption-text', dict.portrait_subcaption);
+        }
 
-    function zoomModalImage(factor) {
-      currentZoom = Math.max(0.8, Math.min(3.0, currentZoom + factor));
-      document.getElementById('modalImage').style.transform = `scale(${currentZoom})`;
-    }
+        function setElText(id, text) {
+            const el = document.getElementById(id);
+            if (el) el.textContent = text;
+        }
 
-    function resetModalZoom() {
-      currentZoom = 1.0;
-      document.getElementById('modalImage').style.transform = 'scale(1)';
-    }
+        function setElHtml(id, html) {
+            const el = document.getElementById(id);
+            if (el) el.innerHTML = html;
+        }
 
-    /* Scroll to Top Smoothly */
-    function scrollToTop() {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
+        function playTempleBell() {
+            try {
+                const AudioContext = window.AudioContext || window.webkitAudioContext;
+                if (!AudioContext) return;
+                const ctx = new AudioContext();
+                if (ctx.state === 'suspended') {
+                    ctx.resume();
+                }
 
-    /* Image Fallback Handler if image URL fails */
-    function handleImageError(img) {
-      img.onerror = null;
-      // Fallback SVG graphic styled as a devotional emblem
-      const fallbackSvg = "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='400' height='500' viewBox='0 0 400 500'><rect width='400' height='500' fill='%233B020B'/><circle cx='200' cy='200' r='120' fill='%23D4AF37' opacity='0.2'/><text x='50%' y='40%' dominant-baseline='middle' text-anchor='middle' fill='%23FFD54F' font-size='64' font-family='serif'>ॐ</text><text x='50%' y='60%' dominant-baseline='middle' text-anchor='middle' fill='%23FFE082' font-size='24' font-family='sans-serif'>श्री देवी लाडी सत्योति</text><text x='50%' y='70%' dominant-baseline='middle' text-anchor='middle' fill='%23D4AF37' font-size='16' font-family='sans-serif'>जयंती स्थल | 1932</text></svg>";
-      img.src = fallbackSvg;
-    }
-  </script>
+                // Brass bell resonant frequencies
+                const freqs = [432, 864, 1296, 1728, 2592];
+                const now = ctx.currentTime;
 
+                freqs.forEach((freq, idx) => {
+                    const osc = ctx.createOscillator();
+                    const gain = ctx.createGain();
+
+                    osc.type = idx % 2 === 0 ? 'sine' : 'triangle';
+                    osc.frequency.setValueAtTime(freq, now);
+                    osc.frequency.exponentialRampToValueAtTime(freq * 0.996, now + 3.0);
+
+                    const initialGain = 0.25 / (idx + 1);
+                    gain.gain.setValueAtTime(initialGain, now);
+                    gain.gain.exponentialRampToValueAtTime(0.0001, now + 3.5 - (idx * 0.3));
+
+                    osc.connect(gain);
+                    gain.connect(ctx.destination);
+
+                    osc.start(now);
+                    osc.stop(now + 3.5);
+                });
+
+                showToast(translations[currentLang].toast_bell);
+            } catch (err) {
+                console.error('Audio synthesis failed:', err);
+            }
+        }
+
+        function adjustFontSize(delta) {
+            currentFontSize = Math.min(22, Math.max(13, currentFontSize + delta));
+            document.documentElement.style.setProperty('--base-font-size', currentFontSize + 'px');
+        }
+
+        function resetFontSize() {
+            currentFontSize = 16;
+            document.documentElement.style.setProperty('--base-font-size', '16px');
+        }
+
+        function handleImageError(img) {
+            console.warn("Local image ./resource/image.png not found, displaying divine SVG placeholder.");
+            // Creates a high quality SVG fallback if resource/image.png is missing locally
+            const svgFallback = `data:image/svg+xml;utf8,
+            <svg xmlns="http://www.w3.org/2000/svg" width="400" height="500" viewBox="0 0 400 500">
+                <rect width="400" height="500" fill="%23280107"/>
+                <circle cx="200" cy="220" r="140" fill="%23D4AF37" opacity="0.2"/>
+                <circle cx="200" cy="220" r="100" fill="%23FF9933" opacity="0.3"/>
+                <text x="200" y="210" font-size="70" fill="%23D4AF37" text-anchor="middle" font-family="serif">ॐ</text>
+                <text x="200" y="270" font-size="22" fill="%23F3E5AB" text-anchor="middle" font-family="sans-serif">श्री लाडी सत्योति देवी</text>
+                <text x="200" y="300" font-size="14" fill="%23FF9933" text-anchor="middle" font-family="sans-serif">पावन चित्र स्वरूप (बटाला)</text>
+            </svg>`;
+            img.src = svgFallback;
+        }
+
+        function openLightbox() {
+            const modal = document.getElementById('lightbox-modal');
+            const mainImg = document.getElementById('main-portrait');
+            const modalImg = document.getElementById('modal-img');
+            if (modal && mainImg && modalImg) {
+                modalImg.src = mainImg.src;
+                modal.classList.remove('hidden');
+            }
+        }
+
+        function closeLightbox() {
+            const modal = document.getElementById('lightbox-modal');
+            if (modal) {
+                modal.classList.add('hidden');
+            }
+        }
+
+        function shareWebsite() {
+            const dummy = document.createElement('input');
+            document.body.appendChild(dummy);
+            dummy.value = window.location.href;
+            dummy.select();
+            document.execCommand('copy');
+            document.body.removeChild(dummy);
+            showToast(translations[currentLang].toast_share);
+        }
+
+        function showToast(msg) {
+            const toast = document.getElementById('toast-msg');
+            const toastText = document.getElementById('toast-text');
+            if (toast && toastText) {
+                toastText.textContent = msg;
+                toast.classList.remove('translate-y-20', 'opacity-0');
+                toast.classList.add('translate-y-0', 'opacity-100');
+                setTimeout(() => {
+                    toast.classList.add('translate-y-20', 'opacity-0');
+                    toast.classList.remove('translate-y-0', 'opacity-100');
+                }, 3000);
+            }
+        }
+    </script>
 </body>
 </html>
