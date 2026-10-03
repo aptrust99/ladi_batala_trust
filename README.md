@@ -1,1 +1,0 @@
-# ladi_batala_trust
