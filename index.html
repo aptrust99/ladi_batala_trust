@@ -11,7 +11,10 @@
     <!-- Google Fonts for Regal Hindi & English Typography -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Inter:wght@300;400;500;600;700&family=Rozha+One&family=Tiro+Devanagari+Hindi:ital@0;1&family=Mukta:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Inter:wght@300;400;500;600;700&family=Rozha+One&family=Tiro+Devanagari+Hindi:ital@0;1&family=Mukta:wght@400;500;600;700&display=swap" rel="stylesheet"> -->
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=Rozha+One&family=Tiro+Devanagari+Hindi:ital@0;1&family=Mukta:wght@400;500;600;700&display=swap" rel="stylesheet"> -->
+
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Roboto:wght@300;400;500;700&family=Rozha+One&family=Tiro+Devanagari+Hindi:ital@0;1&family=Mukta:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -35,8 +38,8 @@
                     fontFamily: {
                         hindiTitle: ['"Rozha One"', 'serif'],
                         hindiBody: ['"Tiro Devanagari Hindi"', '"Mukta"', 'serif'],
-                        englishTitle: ['"Cinzel"', 'serif'],
-                        sans: ['"Inter"', '"Mukta"', 'sans-serif']
+                        englishTitle: ['"Roboto"', 'sans-serif'],
+                        sans: ['"Roboto"', '"Mukta"', 'sans-serif']
                     },
                     boxShadow: {
                         'gold-glow': '0 0 25px rgba(212, 175, 55, 0.4)',
@@ -56,6 +59,15 @@
         html {
             font-size: var(--base-font-size);
             background-color: #FAF7F2;
+        }
+        /* English Font Overrides */
+        html[lang="en"] .font-hindiTitle {
+            font-family: "Playfair Display", serif !important;
+            letter-spacing: 0.02em; /* Adds a very slight, elegant spacing for titles */
+        }
+
+        html[lang="en"] .font-hindiBody {
+            font-family: "Roboto", sans-serif !important;
         }
 
         /* Ornate Gold Text & Gradient Helpers */
@@ -156,34 +168,31 @@
     </header>
 
     <section class="royal-pattern relative text-cream py-8 sm:py-12 px-4 border-b-4 border-gold shadow-xl">
-        <div class="max-w-5xl mx-auto text-center space-y-4">
+        <div class="max-w-6xl mx-auto text-center flex flex-col items-center">
             
-            <!-- Om Symbol Decorative Badge -->
-            <div class="inline-flex items-center justify-center w-14 h-14 rounded-full bg-imperial border-2 border-gold text-gold text-2xl font-bold shadow-gold-glow mb-1">
-                ॐ
+            <!-- Top Layout: 2 Lines Left, OM Middle, 2 Lines Right -->
+            <div class="w-full flex flex-col md:flex-row items-center justify-between gap-6 md:gap-4 mb-8 px-2 lg:px-8">
+                
+                <!-- Left Couplet -->
+                <p id="hero-couplet-1" class="flex-1 text-center md:text-left font-hindiBody text-goldLight text-base sm:text-lg md:text-xl font-medium tracking-wide leading-relaxed">पुरी कुल को अगर है शान कोई । <br> पुरी कुल का अगर है मान कोई ।</p>
+
+                <!-- OM Symbol (Middle) -->
+                <div class="flex-shrink-0 text-5xl sm:text-6xl md:text-7xl text-gold font-bold mx-4 drop-shadow-[0_0_15px_rgba(212,175,55,0.6)]">
+                    ॐ
+                </div>
+
+                <!-- Right Couplet -->
+                <p id="hero-couplet-2" class="flex-1 text-center md:text-right font-hindiBody text-goldLight text-base sm:text-lg md:text-xl font-medium tracking-wide leading-relaxed">
+                तो वह लाडी सती एक सत्योति है । 
+                <br> 
+                हमारे लिए दुर्गा महामाया सती है ।</p>
             </div>
 
             <!-- Main Grand Title -->
-            <h1 id="hero-title" class="font-hindiTitle text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-gold font-bold tracking-wide drop-shadow-md gold-text-gradient">
-                वंशावली कौम पूरीयां
-            </h1>
+            <h1 id="hero-title" class="font-hindiTitle text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-gold font-bold tracking-wide drop-shadow-md gold-text-gradient mt-2 mb-4 pb-3 leading-normal">वंशावली कौम पूरीयां</h1>
 
-            <p id="hero-subtitle" class="text-saffron font-medium text-sm sm:text-lg md:text-xl tracking-wider uppercase">
-                लाडी सत्योति ट्रस्ट (बटाला) - पावन ऐतिहासिक संरक्षण
-            </p>
+            <p id="hero-subtitle" class="text-saffron font-medium text-sm sm:text-lg md:text-xl tracking-wider uppercase">लाडी सत्योति ट्रस्ट (बटाला) - पावन ऐतिहासिक संरक्षण</p>
 
-            <!-- Devotional Couplets Card with Full Text Preserved -->
-            <div class="mt-6 p-4 sm:p-6 bg-maroonDark/80 border-2 border-gold/40 rounded-2xl max-w-3xl mx-auto shadow-2xl relative overflow-hidden space-y-3">
-                <div class="absolute -top-6 -left-6 w-12 h-12 border-t-2 border-l-2 border-gold rounded-tl-xl opacity-60"></div>
-                <div class="absolute -bottom-6 -right-6 w-12 h-12 border-b-2 border-r-2 border-gold rounded-br-xl opacity-60"></div>
-
-                <p id="hero-couplet-1" class="font-hindiBody text-goldLight text-sm sm:text-base md:text-lg italic leading-relaxed border-b border-gold/20 pb-3">
-                    "पुरी कुल को अगर है शान कोई । / पुरी कुल का अगर है मान कोई ।"
-                </p>
-                <p id="hero-couplet-2" class="font-hindiBody text-saffron text-sm sm:text-base md:text-lg italic leading-relaxed pt-1">
-                    "तो वह लाडी सती एक सत्योति है । / हमारे लिए दुर्गा महामाया सती है ।"
-                </p>
-            </div>
         </div>
     </section>
 
@@ -423,8 +432,8 @@
                 bell_btn: "पावन घंटी बजाएं",
                 hero_title: "वंशावली कौम पूरीयां",
                 hero_subtitle: "लाडी सत्योति ट्रस्ट (बटाला) - पावन ऐतिहासिक संरक्षण",
-                couplet_1: `"पुरी कुल को अगर है शान कोई । / पुरी कुल का अगर है मान कोई ।"`,
-                couplet_2: `"तो वह लाडी सती एक सत्योति है । / हमारे लिए दुर्गा महामाया सती है ।"`,
+                couplet_1: `पुरी कुल को अगर है शान कोई । <br> पुरी कुल का अगर है मान कोई ।`,
+                couplet_2: `तो वह लाडी सती एक सत्योति है । <br> हमारे लिए दुर्गा महामाया सती है ।`,
                 
                 hist_title: "इतिहास एवं आस्था",
                 hist_badge: "1932 ई. स्थापित ट्रस्ट",
@@ -434,7 +443,7 @@
                 hist_p3: "पूरी बिरादरी इन दिनों रोजगार की तलाश में और पंजाब की आबादी की तबादला की वजह से दुर-दराज भिन्न-भिन्न शहरों में आबाद हो गये हैं । जिस की वजह से आपस में मेल मिलाप और जान पहचान खतम होती जा रही है ।",
                 hist_foot: `<i class="fa-solid fa-om mr-1"></i> पावन परंपरा`,
 
-                portrait_badge: "देवी लाडी सत्योति की जय",
+                portrait_badge: "देवी लाडी सत्योति की जय 🙏",
                 portrait_caption: "॥ श्री जगज्जननी लाडी सत्योति देवी जी ॥",
                 portrait_subcaption: "बटाला स्थित पावन मुख्य मंदिर स्वरूप",
                 hover_zoom: "बड़ा करके देखें",
@@ -451,7 +460,7 @@
                 contact_head: "पंजीकरण एवं सूचना",
                 contact_body: "पूरी परिवार के सदस्य अपनी वंशावली प्रविष्टियों एवं विवरण हेतु ट्रस्ट कार्यालय बटाला से संपर्क कर सकते हैं।",
 
-                footer_motto: "देवी लाडी सत्योति की जय",
+                footer_motto: "देवी लाडी सत्योति की जय 🙏",
                 footer_copy: "© लाडी सत्योति ट्रस्ट | पूरी परिवार डिजिटल अभिलेखागार",
                 footer_sub: "संरक्षण एवं संकलन: पूरी क्षत्रिय वंश धरोहर समिति (बटाला)",
                 toast_bell: "🔔 पावन मंदिर की घंटी बज रही है...",
@@ -462,8 +471,8 @@
                 bell_btn: "Ring Temple Bell",
                 hero_title: "Genealogy of the Puri Lineage",
                 hero_subtitle: "Ladi Satyoti Trust (Batala) - Sacred Historical Heritage",
-                couplet_1: `"If the Puri clan holds any pride and glory, / If the Puri clan holds any honor and majesty..."`,
-                couplet_2: `"It is Goddess Ladi Sati Satyoti alone, / To us, she is Great Mother Durga Mahamaya personified."`,
+                couplet_1: `If the Puri clan holds any pride and glory, <br> If the Puri clan holds any honor and majesty...`,
+                couplet_2: `It is Goddess Ladi Sati Satyoti alone, <br> To us, she is Mother Durga Mahamaya personified.`,
                 
                 hist_title: "History & Faith",
                 hist_badge: "Est. 1932 AD Trust",
@@ -473,7 +482,7 @@
                 hist_p3: "Today, members of the Puri community have settled across various far-off cities in pursuit of livelihoods and following historical population shifts in Punjab. Because of this, social connection and familiarity among families is fading away.",
                 hist_foot: `<i class="fa-solid fa-om mr-1"></i> Sacred Heritage`,
 
-                portrait_badge: "Victory to Devi Ladi Satyoti",
+                portrait_badge: "Devi Ladi Satyoti Ki Jai 🙏",
                 portrait_caption: "॥ Shri Jagatjanani Ladi Satyoti Devi Ji ॥",
                 portrait_subcaption: "Sacred Main Temple Portrait located at Batala",
                 hover_zoom: "Click to Enlarge",
@@ -490,7 +499,7 @@
                 contact_head: "Registration & Contact",
                 contact_body: "Members of the Puri family may contact the Trust Office at Batala for lineage additions and record verification.",
 
-                footer_motto: "Victory to Devi Ladi Satyoti",
+                footer_motto: "Devi Ladi Satyoti Ki Jai 🙏",
                 footer_copy: "© Ladi Satyoti Trust | Puri Family Digital Archive",
                 footer_sub: "Preservation & Compilation: Puri Kshatriya Heritage Board (Batala)",
                 toast_bell: "🔔 Sacred Temple Bell is Chiming...",
@@ -588,50 +597,14 @@
 
         function playTempleBell() {
             try {
-                const AudioContext = window.AudioContext || window.webkitAudioContext;
-                if (!AudioContext) return;
-                const ctx = new AudioContext();
-                if (ctx.state === 'suspended') {
-                    ctx.resume();
-                }
-
-                // Base frequencies to mimic the metallic resonance of a heavy brass ghanta
-                const freqs = [350, 700, 1050, 1400, 2100, 2800];
-                const now = ctx.currentTime;
+                // Initialize and play the MP3 file once
+                const bellSound = new Audio('./resource/temple_audio.mp3');
+                bellSound.play();
                 
-                // Strike exactly 3 times
-                for (let i = 0; i < 3; i++) {
-                    // Time each strike 1.6 seconds apart for a natural ringing rhythm
-                    const strikeTime = now + (i * 1.6);
-                    
-                    freqs.forEach((freq, idx) => {
-                        const osc = ctx.createOscillator();
-                        const gain = ctx.createGain();
-
-                        // Mix of sine and square waves for a rich, clanging overtone
-                        osc.type = idx % 2 === 0 ? 'sine' : 'square';
-                        
-                        // Add slight inharmonic detuning typical of cast bells
-                        osc.frequency.setValueAtTime(freq + (Math.random() * 6 - 3), strikeTime);
-                        osc.frequency.exponentialRampToValueAtTime(freq * 0.98, strikeTime + 3);
-
-                        // Fast attack, slow exponential decay for the lingering ring
-                        const initialGain = 0.4 / (idx + 1); 
-                        gain.gain.setValueAtTime(0, strikeTime);
-                        gain.gain.linearRampToValueAtTime(initialGain, strikeTime + 0.02);
-                        gain.gain.exponentialRampToValueAtTime(0.001, strikeTime + 3);
-
-                        osc.connect(gain);
-                        gain.connect(ctx.destination);
-
-                        osc.start(strikeTime);
-                        osc.stop(strikeTime + 3.5);
-                    });
-                }
-
+                // Show the success notification
                 showToast(translations[currentLang].toast_bell);
             } catch (err) {
-                console.error('Audio synthesis error:', err);
+                console.error('Audio playback error:', err);
             }
         }
 
